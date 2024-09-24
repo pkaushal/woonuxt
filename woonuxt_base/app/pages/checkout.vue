@@ -25,8 +25,9 @@ onBeforeMount(async () => {
 const payNow = async () => {
   buttonText.value = t('messages.general.processing');
 
-  const { stripePaymentIntent } = await GqlGetStripePaymentIntent();
-  const clientSecret = stripePaymentIntent?.clientSecret || '';
+  //const { stripePaymentIntent } = await GqlGetStripePaymentIntent();
+  // const clientSecret = stripePaymentIntent?.clientSecret || '';
+  const clientSecret = '';
 
   try {
     if (orderInput.value.paymentMethod.id === 'stripe' && stripe && elements.value) {
