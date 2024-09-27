@@ -2,7 +2,7 @@
 const route = useRoute();
 const { isShowingCart, toggleCart } = useCart();
 const { isShowingMobileMenu, toggleMobileMenu, addBodyClass, removeBodyClass } = useHelpers();
-const { siteName } = useAppConfig();
+const { siteName, storeName } = useAppConfig();
 
 const closeCartAndMenu = () => {
   toggleCart(false);
@@ -19,7 +19,7 @@ watch(
 );
 
 useHead({
-  titleTemplate: `%s - ${siteName}`,
+  titleTemplate: `%s - ${storeName}`,
 });
 </script>
 
